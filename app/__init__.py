@@ -13,6 +13,7 @@ from app.api.v2.views.party_views import party_v2
 from app.api.v2.views.candidates_views import candidate_v2
 from app.config import app_config
 import os
+from flask_cors import CORS
 from flask_jwt_extended import JWTManager, jwt_required, create_access_token, get_jwt_identity
 
 
@@ -50,6 +51,8 @@ def electoral_app(config_name):
     """Create app."""
 
     app = Flask(__name__)
+    CORS(app)
+
 
     app.config.from_pyfile('config.py')
     app.config["SECRET_KEY"] = 'thisisarrotech'

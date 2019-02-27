@@ -1,0 +1,10 @@
+{
+    "parties": [
+        {
+			"name": "ODM",
+			"hqAddress": "KICC",
+			"logoUrl": "https://www.w3schools.org"
+        }
+    ],
+    "message": "success"
+}
