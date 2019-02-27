@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Log-In</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" media="screen" href="main.css"/>
+    <link rel="stylesheet" type="text/css" media="screen" href="css/main.css"/>
 </head>
     <body>
         <header><h1>Politico</h1></header>
@@ -17,30 +17,25 @@
                 </ul>
             </div>
         </nav>
-            <div class="container">
-                <div class="wrap-login">
-                    <form id="getAPI">
-                        <h2>Login to Your Account</h2>
-                        <hr>
-                        <div id="output">
-                            <label for="email"><b>Email</b></label><br>
-                            <input type="text" placeholder="Email" name="email" required><br>
-
-                            <label for="psw"><b>Password</b></label><br>
-                            <input type="password" placeholder="Password" name="psw" required><br>
-                        </div>
-                        <div class="line">
-                            <button id="getLogin" type="button" class="signinbtn position">SignIn</button>
-                        </div>
-                        <div class="lnk">
-                            <p>Forgot password? <a href="password_reset.html">Reset</a></p>
-                        </div>
-                        <div class="lnk">
-                            <p>Dont have an account? <a href="register.html">SignUp</a></p>
-                        </div>
-                    </form>
-                </div>
+        <div class="container">
+            <div class="wrap-login">
+                <form id="PostLogin">
+                    <h2>Login to Your Account</h2>
+                    <hr>
+                    <div>
+                        <label for="email"><b>Email</b></label><br>
+                        <input id="email" type="text" placeholder="Email" name="email" required><br>
+                    </div>
+                    <div>
+                        <label for="psw"><b>Password</b></label><br>
+                        <input id="password" type="password" placeholder="Password" name="psw" required><br>
+                    </div>
+                    <div class="line">
+                        <button type="submit" class="signinbtn position">SignIn</button>
+                    </div>
+                </form>
             </div>
+        </div>
         <footer>
             <div class="footer-divide">
                 <div class="divide">

@@ -5,72 +5,83 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Register</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" media="screen" href="main.css"/>
+    <link rel="stylesheet" type="text/css" media="screen" href="css/main.css"/>
 </head>
     <body>
         <header><h1>Politico</h1></header>
-            <nav>
-                <div>
-                    <ul>
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="login.html">SignIn</a></li>
-                    </ul>
-                </div>
-            </nav>
-            <div class="container">
-                <div class="wrap-register">
-                    <form>
-                        <h2>Create An Account</h2>
+        <nav>
+            <div>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="login.html">SignIn</a></li>
+                </ul>
+            </div>
+        </nav>
+        <div class="container">
+            <div class="wrap-register">
+                <form  id="postSignup">
+                        <h2>Create a New Account</h2>
                         <hr>
-                        <label for="uname"><b>Username</b></label>
-                        <input type="text" placeholder="Username" name="uname" required>
-
-                        <label for="name"><b>Name</b></label>
-                        <input type="text" placeholder="Full Name" name="name" required>
-
-                        <label for="email"><b>Email</b></label>
-                        <input type="text" placeholder="Email" name="email" required>
-
-                        <label for="psw"><b>Password</b></label>
-                        <input type="password" placeholder="Password" name="psw" required>
-
-                        <label for="cnf-psw"><b>Confirm Password</b></label>
-                        <input type="password" placeholder="Confirm Password" name="conf-psw" required>
-
                         <div>
-                            <button type="button" class="signupbtn">SignUp</button>
+                            <label><b>Firstname</b></label>
+                            <input id="firstname" type="text" placeholder="Firstname" name="" required>
                         </div>
-                        <div class="lnk">
-                            <p>Already have an account? <a href="login.html">SignIn</a></p>
+                        <div>
+                            <label><b>Lastname</b></label>
+                            <input id="lastname" type="text" placeholder="Lastname" name="" required>
+                        </div>
+                        <div>
+                            <label for="email"><b>Email</b></label>
+                            <input id="email" type="text" placeholder="Email" name="email" required>
+                        </div>
+                        <div>
+                            <label for="psw"><b>Password</b></label>
+                            <input id="password" type="password" placeholder="Password" name="psw" required>
+                        </div>
+                        <div>
+                            <label for="pNumber"><b>Phone Number</b></label>
+                            <input id="phoneNumber" type="text" placeholder="Phone Number" name="pNumber" required>
+                        </div>
+                        <div>
+                            <label for="pUrl"><b>Passport Url</b></label>
+                            <input id="passportUrl" type="text" placeholder="Passport Url" name="pUrl" required>
+                        </div>
+                        <div>
+                            <label for="role"><b>Role</b></label>
+                            <input id="role" type="text" placeholder="Role" name="role" required>
+                        </div>
+                        <div>
+                            <button type="submit" class="signupbtn">SignUp</button>
                         </div>
                     </form>
-                </div>
+                <script type="text/javascript" src="js/signup.js"></script>
             </div>
-            <footer>
-                <div class="footer-divide">
-                    <div class="divide">
-                        <h2>Contact Us</h2>
-                        <p>Tel : (+254) 7 568 564</p>
-                        <p>Instagram: @arrotech</p>
-                        <p>Email : arrotechdesign@gmail.com</p>
-                        <p>Facebook: Arrotech</p>
-                        <p>Twitter: @Arrotech</p>  
-                    </div>
-                    <div class="divide">
-                        <h2>Elections</h2>
-                        <p>Political parties</p>
-                        <p>Government offices</p>
-                        <p>Candidates</p>
-                        <p>Voters</p>
-                    </div>
-                    <div class="divide">
-                        <h2>Others</h2>
-                        <p>Admin</p>
-                        <p>Politicians</p>
-                        <p>SignUp</p>
-                        <p>Login</p>
-                    </div>                               
+        </div>
+        <footer>
+            <div class="footer-divide">
+                <div class="divide">
+                    <h2>Contact Us</h2>
+                    <p>Tel : (+254) 7 568 564</p>
+                    <p>Instagram: @arrotech</p>
+                    <p>Email : arrotechdesign@gmail.com</p>
+                    <p>Facebook: Arrotech</p>
+                    <p>Twitter: @Arrotech</p>  
                 </div>
-            </footer> 
+                <div class="divide">
+                    <h2>Elections</h2>
+                    <p>Political parties</p>
+                    <p>Government offices</p>
+                    <p>Candidates</p>
+                    <p>Voters</p>
+                </div>
+                <div class="divide">
+                    <h2>Others</h2>
+                    <p>Admin</p>
+                    <p>Politicians</p>
+                    <p>SignUp</p>
+                    <p>Login</p>
+                </div>                               
+            </div>
+        </footer> 
     </body>
 </html>
