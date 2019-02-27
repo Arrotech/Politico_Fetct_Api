@@ -14,7 +14,7 @@ document.getElementById('postSignup').addEventListener('submit', postSignup);
             fetch('https://politico-api-database.herokuapp.com/api/v2/auth/signup', {
                 method: 'POST',
                 headers : {
-                	'Accept': 'application/json',
+                	Accept: 'application/json',
                     'Content-Type': 'application/json'
                 },
                 body:JSON.stringify({firstname:firstname, lastname:lastname, email:email, password:password, phoneNumber:phoneNumber, passportUrl:passportUrl, role:role})
