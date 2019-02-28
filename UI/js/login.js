@@ -6,11 +6,10 @@ document.getElementById('postLogin').addEventListener('submit', postLogin);
             let email = document.getElementById('email').value;
             let password = document.getElementById('password').value;
 
-            fetch('https://politico-api-database.herokuapp.com/api/v2/auth/signup', {
+            fetch('https://politico-api-database.herokuapp.com/api/v2/auth/login', {
                 method: 'POST',
-                mode: 'no-cors',
                 headers : {
-                	'Accept': 'application/json',
+                	Accept: 'application/json',
                     'Content-Type': 'application/json'
                 },
                 body:JSON.stringify({email:email, password:password})
