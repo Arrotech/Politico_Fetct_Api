@@ -1,6 +1,6 @@
 document.getElementById('postLogin').addEventListener('submit', postLogin);
 
- function postLogin(event){
+    function postLogin(event){
             event.preventDefault();
 
             let email = document.getElementById('email').value;
