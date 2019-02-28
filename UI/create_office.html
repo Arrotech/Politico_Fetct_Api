@@ -6,7 +6,6 @@
     <title>Create-Office</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="css/main.css" />
-    <script src="main.js"></script>
 </head>
     <body>
         <div class="leftnav">
@@ -37,19 +36,20 @@
             </nav>
             <div class="container">
                 <div class="wrap-register">
-                    <form>
+                    <form id="postOffice">
                         <h2>Create A New Office</h2>
                         <hr>
-                        <label for="uname"><b>Office Name:</b></label>
-                        <input type="text" placeholder="i.e Presidential" name="uname" required>
+                        <label><b>Office Category:</b></label>
+                        <input id="category" type="text" placeholder="i.e state" name="" required>
 
-                        <label for="email"><b>Contenders:</b></label>
-                        <input type="text" placeholder="i.e 2" name="email" required>
+                        <label><b>Office Name:</b></label>
+                        <input id="name" type="text" placeholder="i.e presidential" name="" required>
 
                         <div>
-                            <button type="button" class="signupbtn">Add</button>
+                            <button type="submit" class="signupbtn">Add</button>
                         </div>
                     </form>
+                    <script type="text/javascript" src="js/create_office.js"></script>
             </div>
             </div>
             <footer>
