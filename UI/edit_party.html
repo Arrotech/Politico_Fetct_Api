@@ -36,19 +36,27 @@
                 </nav>
             <div class="container">
                 <div class="wrap-register">
-                    <form>
-                        <h2>Change Party Name</h2>
+                    <form id="editParty">
+                        <h2>Change Party Details</h2>
                         <hr>
-                        <label for="uname"><b>New Party Name:</b></label>
-                        <input type="text" placeholder="i.e People's Party(PP)" name="uname" required>
 
-                        <label for="name"><b>Confirm Party Name:</b></label>
-                        <input type="text" placeholder="i.e People's Party(PP)" name="name" required>
+                        <label ><b>Party Id:</b></label>
+                        <input id="party_id" type="text" placeholder="i.e 1" name="" required>
+
+                        <label ><b>New Party Name:</b></label>
+                        <input id="name" type="text" placeholder="i.e ODM" name="" required>
+
+                        <label ><b>New Party Headquarters:</b></label>
+                        <input id="hqAddress" type="text" placeholder="i.e Anniversary" name="" required>
+
+                        <label ><b>New Party Logo:</b></label>
+                        <input id="logoUrl" type="text" placeholder="i.e https://www.odm.com" name="" required>
 
                         <div>
-                            <button type="button" class="signupbtn">Add Party</button>
+                            <button type="submit" class="signupbtn">Update</button>
                         </div>
                     </form>
+                    <script type="text/javascript" src="js/edit_party.js"></script>
             </div>
             </div>
             <footer>
