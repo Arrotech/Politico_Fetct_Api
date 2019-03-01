@@ -1,22 +1,22 @@
-document.getElementById('createParty').addEventListener('submit', createParty);
+document.getElementById('showInterest').addEventListener('submit', showInterest);
 
-    function createParty(event){
+    function showInterest(event){
             event.preventDefault();
 
             token = window.localStorage.getItem('token');
 
-            let name = document.getElementById('name').value;
-            let hqAddress = document.getElementById('hqAddress').value;
-            let logoUrl = document.getElementById('logoUrl').value;
+            let office = document.getElementById('office').value;
+            let candidate = document.getElementById('candidate').value;
+            let party = document.getElementById('party').value;
 
-            fetch('https://politico-api-database.herokuapp.com/api/v2/parties', {
+            fetch('https://politico-api-database.herokuapp.com/api/v2/candidates', {
                 method: 'POST',
                 headers : {
                 	Accept: 'application/json',
                     'Content-Type': 'application/json',
                     'Authorization': 'Bearer ' + token,
                 },
-                body:JSON.stringify({name:name, hqAddress:hqAddress, logoUrl:logoUrl})
+                body:JSON.stringify({office:office, candidate:candidate, party:party})
             }).then((res) => res.json())
             .then((data) =>  {
                 console.log(data);
