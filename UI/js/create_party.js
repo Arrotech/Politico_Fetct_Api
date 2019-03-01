@@ -23,3 +23,4 @@ document.getElementById('createParty').addEventListener('submit', createParty);
             })
             .catch((err)=>console.log(err))
         }
+
