@@ -10,6 +10,7 @@ document.getElementById('editParty').addEventListener('submit', editParty);
             let hqAddress = document.getElementById('hqAddress').value;
             let logoUrl = document.getElementById('logoUrl').value;
 
+
             fetch('https://politico-api-database.herokuapp.com/api/v2/parties/' + party_id, {
                 method: 'PUT',
                 path: party_id,
