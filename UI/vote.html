@@ -33,53 +33,26 @@
                     </ul>
                 </div>
             </nav>
-            <div>
-                <table>
-                    <tr>
-                        <th>Candidate name</th>
-                        <th>Office</th>
-                    </tr>
-                    <tr>
-                        <td>
-                        <select>
-                            <option>Hon. Jane Doe</option>
-                            <option>Hon. George Sam</option>
-                            <option>Hon. Mariam Keni</option>
-                        </select>
-                        </td>
-                        <td>Presidential</td>
-                    </tr>
-                    <tr>
-                        <td>
-                        <select>
-                            <option>Hon. Jane Doe</option>
-                            <option>Hon. George Sam</option>
-                            <option>Hon. Mariam Keni</option>
-                        </select>
-                        </td>
-                        <td>Governor</td>
-                    </tr>
-                    <tr>
-                        <td>
-                        <select>
-                            <option>Hon. Jane Doe</option>
-                            <option>Hon. George Sam</option>
-                            <option>Hon. Mariam Keni</option>
-                        </select>
-                        </td>
-                        <td>Member of parliament</td>
-                    </tr>
-                    <tr>
-                        <td>
-                        <select>
-                            <option>Hon. Jane Doe</option>
-                            <option>Hon. George Sam</option>
-                            <option>Hon. Mariam Keni</option>
-                        </select>
-                        </td>
-                        <td>Member of county assembly</td>
-                    </tr>
-                </table>
+            <div class="container">
+                <div class="wrap-register">
+                    <form id="newVote">
+                        <h2>Vote</h2>
+                        <hr>
+                        <label><b>Voter Id:</b></label>
+                        <input id="createdBy" type="text" placeholder="i.e 1" name="" required>
+
+                        <label><b>Office Id:</b></label>
+                        <input id="office" type="text" placeholder="i.e 1" name="" required>
+
+                        <label><b>Candidate Id:</b></label>
+                        <input id="candidate" type="text" placeholder="i.e 1" name="" required>
+
+                        <div>
+                            <button type="submit" class="signupbtn">Vote</button>
+                        </div>
+                    </form>
+                    <script type="text/javascript" src="js/vote.js"></script>
+            </div>
             </div>
             <footer>
                 <div class="footer-divide">
