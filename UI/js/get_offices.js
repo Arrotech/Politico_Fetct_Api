@@ -5,6 +5,7 @@ document.getElementById('getOffices').addEventListener('click', getOffices);
 
             token = window.localStorage.getItem('token');
 
+
             fetch('https://politico-api-database.herokuapp.com/api/v2/offices',{
                 method: 'GET',
                 headers : {
