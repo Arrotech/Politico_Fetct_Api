@@ -19,6 +19,18 @@ document.getElementById('postSignup').addEventListener('submit', postSignup);
                 },
                 body:JSON.stringify({firstname:firstname, lastname:lastname, email:email, password:password, phoneNumber:phoneNumber, passportUrl:passportUrl, role:role})
             }).then((res) => res.json())
-            .then((data) =>  console.log(data))
+            .then((data) =>  {
+
+                console.log(data);
+                let user = data['user'];
+                if (user.email === 'admin@admin.com'){
+                    localStorage.setItem("user", JSON.stringify(data[0]));
+                    window.location.replace('admin.html');
+                }else{
+                    localStorage.setItem("user", JSON.stringify(data[0]));
+                    window.location.replace('user.html');
+                }
+
+            })
             .catch((err)=>console.log(err))
         }

@@ -17,6 +17,16 @@ document.getElementById('postOffice').addEventListener('submit', postOffice);
                 },
                 body:JSON.stringify({category:category, name:name})
             }).then((res) => res.json())
-            .then((data) =>  console.log(data))
+            .then((data) =>  {
+
+                console.log(data);
+                let status = data['status'];
+                if (status === '201'){
+                    window.location.reload();
+                }else{
+                    window.location.replace('index.html');
+                }
+
+            })
             .catch((err)=>console.log(err))
         }
