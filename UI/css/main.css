@@ -1,7 +1,7 @@
 body{
   font-family: Verdana, Helvetica, sans-serif Verdana, Geneva, Tahoma, sans-serif;
   font-size: 14px;
-  background:#fff;
+  background:#F3EFE0;
   margin: 0;
   padding: 0;
   height: 100%;
@@ -9,6 +9,7 @@ body{
   flex-direction: column;
 }
 h2{
+  left: 0px;
   margin-left: 10px;
 }
 #getOffices{
@@ -209,7 +210,7 @@ input[type=text], input[type=password] {
   padding: 15px;
   display: inline-block;
   border: none;
-  background: #f1f1f1;
+  background: rgb(233, 236, 236);
   border-radius: 100px;
 }
 
@@ -392,7 +393,7 @@ footer {
   left: 0;
   bottom: 0;
   width: 100%;
-  background-color: #fff;
+  background-color: #F3EFE0;
   color: black;
   font-size: 14px;
   text-align: center;
@@ -435,12 +436,22 @@ text-align: center;
     color: #f1f1f1;
 }
 
-@media screen and (max-height: 450px) {
+@media screen and (max-height: 450px) {        <div class="leftnav">
+            <a href="#profile"><img src="img/avatar.png" alt="Avatar" class="avatar"></a><br>
+            <a href="vote.html">Vote Now</a><br>
+            <a href="offices.html">Elections</a><br>
+            <a href="#">Profile</a><br>
+            <a href="#">Trash</a><br>
+            <a href="#">Help & Feedback</a><br>
+            <a href="#">Calendar</a><br>
+            <a href="#">Settings</a><br>
+            <a id="logout" onclick="on_logout()" href="#">Sign Out</a><br>
+        </div>
     .sidenav {padding-top: 15px;}
     .sidenav a {font-size: 18px;}
 }
 
-
+/*lfet sidebar*/
 .leftnav {
   height: 100%;
   width: 160px;
@@ -469,6 +480,7 @@ text-align: center;
   margin-left: 160px;
   font-size: 14px;
   padding: 0px 10px;
+  background: #F3EFE0;
 }
 
 @media screen and (max-height: 450px) {
@@ -525,4 +537,38 @@ text-align: center;
 @keyframes fadeout {
   from {bottom: 30px; opacity: 1;}
   to {bottom: 0; opacity: 0;}
+}
+
+
+@import "compass/css3";
+
+@import url(https://fonts.googleapis.com/css?family=Lato);
+html {
+  height: 100%;
+  background: #444;
+}
+
+* { box-sizing: border-box; }
+
+$primary: #27ae60;
+
+body {
+  padding: 0;
+  margin: 0;
+  font-family: 'Lato';
+  height: 100%;
+  @include perspective(1500px);
+}
+
+.main-content {
+  background: #F3EFE0;
+  height: 100%;
+  width: 100%;
+  font-weight: bold !important;
+  @include transition(0.3s all);
+
+  h1 {
+    color: $primary;
+    margin: 0;
+  }
 }
