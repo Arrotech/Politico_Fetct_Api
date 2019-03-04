@@ -20,7 +20,6 @@ document.getElementById('postLogin').addEventListener('submit', postLogin);
                 let user = data['user'];
                 if (user.email === 'admin@admin.com'){
                     localStorage.setItem('token', data.token);
-                    
                     window.location.replace('admin.html');
                 }else{
                     localStorage.setItem('token', data.token);
