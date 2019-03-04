@@ -15,8 +15,17 @@ document.getElementById('postLogin').addEventListener('submit', postLogin);
                 body:JSON.stringify({email:email, password:password})
             }).then((res) => res.json())
             .then((data) =>  {
-                localStorage.setItem('token', data.token);
+
                 console.log(data);
+                let user = data['user'];
+                if (user.email === 'admin@admin.com'){
+                    localStorage.setItem('token', data.token);
+                    
+                    window.location.replace('admin.html');
+                }else{
+                    localStorage.setItem('token', data.token);
+                    window.location.replace('user.html');
+                }
             })
             .catch((err)=>console.log(err))
         }
