@@ -8,32 +8,44 @@
     <link rel="stylesheet" type="text/css" media="screen" href="css/main.css"/>
 </head>
     <body>
+        <div class="leftnav">
+            <a href="#profile"><img src="img/avatar.png" alt="Avatar" class="avatar"></a><br>
+            <a href="vote.html">Vote Now</a><br>
+            <a href="offices.html">Elections</a><br>
+            <a href="#">Profile</a><br>
+            <a href="#">Trash</a><br>
+            <a href="#">Help & Feedback</a><br>
+            <a href="#">Calendar</a><br>
+            <a href="#">Settings</a><br>
+            <a id="logout" onclick="on_logout()" href="#">Sign Out</a><br>
+        </div>
+        <div class="main">
         <header><h1>Politico</h1></header>
         <nav>
             <div>
                 <ul>
                     <li><a href="index.html">Home</a></li>
                     <li><a href="offices.html">Elections</a></li>
-                    <li><a href="login.html">Vote Now</a></li>
+                    <li><a href="vote.html">Vote Now</a></li>
                 </ul>
             </div>
         </nav>
-        <h2>View all offices</h2>
+        <h3>View all offices</h3>
             <div>
                 <button id="getOffices" type="button" class="signupbtn">Offices</button>
                 <p id="result"></p>
             </div>
-        <h2>View all Parties</h2>
+        <h3>View all Parties</h3>
             <div>
                 <button id="getParties" type="button" class="signupbtn">Parties</button>
                 <p id="output"></p>
             </div>
-        <h2>View all Candidates</h2>
+        <h3>View all Candidates</h3>
             <div>
                 <button id="getCandidates" type="button" class="signupbtn">Candidates</button>
                 <p id="display"></p>
             </div>
-        <h2>View Results</h2>
+        <h3>View Results</h3>
             <div>
                 <button id="getResults" type="button" class="signupbtn">Results</button>
                 <p id="show"></p>
@@ -62,5 +74,6 @@
                 </div>                               
             </div>
         </footer>
+    </div>
     </body>   
 </html>
