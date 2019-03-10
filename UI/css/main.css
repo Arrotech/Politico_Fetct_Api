@@ -205,8 +205,9 @@ td{
 }
 
 input[type=text], input[type=password] {
-  height: 40px;
-  width: 350px;
+
+  height: 30px;
+  width: 250px;
   padding: 15px;
   display: inline-block;
   border: none;
@@ -266,7 +267,7 @@ li a:hover{
 /* Set a style for all buttons */
 button {
   background-color: rgb(230, 78, 78);
-  color: white;
+  color: #252525;
   padding: 14px 20px;
   margin: 8px 0;
   border: none;
@@ -279,28 +280,28 @@ button:hover {
   opacity:1;
 }
 
-
-.trackbtn{
-  margin: 50px 0 22px 130px;
-
-}
-
 .signupbtn {
-  height: 40px;
-  width: 100px;
+  height: 30px;
+  width: 75px;
   border-radius: 100px;
+  text-align: center;
+  padding: 8px;
 }
 
 .signinbtn {
-  height: 40px;
-  width: 100px;
+  height: 30px;
+  width: 75px;
   border-radius: 100px;
+  text-align: center;
+  padding: 8px;
 }
 
 .submit{
-  height: 50px;
-  width: 200px;
+  height: 30px;
+  width: 75px;
   border-radius: 100px;
+  text-align: center;
+  padding: 8px;
 }
 
 .line{
@@ -317,6 +318,9 @@ nav.container{
   margin: 0 auto;
   height: 38%;
   background-origin: padding-box;
+  background-color: #eae7dc;
+  border-radius: 20px;
+  padding-left: 20px;
 }
 .wrap-specific{
   width: 27.89%;
@@ -331,6 +335,9 @@ nav.container{
   margin: 0 auto;
   height: 59%;
   background-origin: padding-box;
+  background-color: #eae7dc;
+  border-radius: 20px;
+  padding-left: 20px;
 }
 
 .wrap-order{
@@ -374,9 +381,13 @@ footer {
     width: 100%;
     background-color: #000000;
     color: white;
-    font-size: 14px;
+    font-size: 12px;
     text-align: center;
     font-family: helvetica;
+}
+
+footer p{
+  font-size: 12px;
 }
 
 .footer-divide{
@@ -436,17 +447,7 @@ text-align: center;
     color: #f1f1f1;
 }
 
-@media screen and (max-height: 450px) {        <div class="leftnav">
-            <a href="#profile"><img src="img/avatar.png" alt="Avatar" class="avatar"></a><br>
-            <a href="vote.html">Vote Now</a><br>
-            <a href="offices.html">Elections</a><br>
-            <a href="#">Profile</a><br>
-            <a href="#">Trash</a><br>
-            <a href="#">Help & Feedback</a><br>
-            <a href="#">Calendar</a><br>
-            <a href="#">Settings</a><br>
-            <a id="logout" onclick="on_logout()" href="#">Sign Out</a><br>
-        </div>
+@media screen and (max-height: 450px) {
     .sidenav {padding-top: 15px;}
     .sidenav a {font-size: 18px;}
 }
@@ -501,16 +502,17 @@ text-align: center;
   visibility: hidden;
   min-width: 250px;
   margin-left: -125px;
-  background-color: #333;
-  color: #fff;
+  background-color: rgb(230, 78, 78);
+  color: #000000;
   text-align: center;
-  border-radius: 2px;
+  font-weight: bold;
+  border-radius: 10px;
   padding: 16px;
   position: fixed;
   z-index: 1;
   left: 50%;
   bottom: 30px;
-  font-size: 17px;
+  font-size: 15px;
 }
 
 #snackbar.show {
@@ -572,3 +574,135 @@ body {
     margin: 0;
   }
 }
+
+
+.social-footer {
+  padding: 1rem;
+  background: #000000;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.social-footer .social-footer-icons li{
+  background-color: #000000;
+}
+
+.fa {
+  background: #000000;
+  padding: 7px;
+  color: #fefefe;
+  font-size: 10px;
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  text-decoration: none;
+  margin: 3px 1px;
+  border-radius: 50%;
+}
+
+/* Add a hover effect if you want */
+.fa:hover {
+  opacity: 0.1;
+}
+
+/* Set a specific color for each brand */
+
+/* Facebook */
+.fa-facebook {
+  background: #3B5998;
+  color: white;
+}
+
+/* Twitter */
+.fa-twitter {
+  background: #55ACEE;
+  color: white;
+}
+
+/*Instagram*/
+
+.fa-instagram {
+  background: #125688;
+  color: white;
+}
+
+.fa-youtube {
+  background: #bb0000;
+  color: white;
+}
+
+.fa-google {
+  background: #dd4b39;
+  color: white;
+}
+
+.fa-pinterest {
+  background: #cb2027;
+  color: white;
+}
+
+.sidebar {
+  margin: 0;
+  float: right;
+  padding: 0;
+  width: 200px;
+  background-color: #f1f1f1;
+  position: fixed;
+  height: 80%;
+  overflow: auto;
+}
+
+/* Sidebar links */
+.sidebar a {
+  display: block;
+  color: black;
+  padding: 16px;
+  text-decoration: none;
+}
+
+/* Active/current link */
+.sidebar a.active {
+  background-color: #4CAF50;
+  color: white;
+}
+
+/* Links on mouse-over */
+.sidebar a:hover:not(.active) {
+  background-color: #555;
+  color: white;
+}
+
+/* Page content. The value of the margin-left property should match the value of the sidebar's width property */
+div.content {
+  margin-left: 200px;
+  padding: 1px 16px;
+  height: 1000px;
+}
+
+/* On screens that are less than 700px wide, make the sidebar into a topbar */
+@media screen and (max-width: 700px) {
+  .sidebar {
+    width: 100%;
+    height: auto;
+    position: relative;
+  }
+  .sidebar a {float: left;}
+  div.content {margin-left: 0;}
+}
+
+/* On screens that are less than 400px, display the bar vertically, instead of horizontally */
+@media screen and (max-width: 400px) {
+  .sidebar a {
+    text-align: center;
+    float: none;
+  }
+}
+
+

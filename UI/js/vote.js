@@ -1,5 +1,24 @@
 document.getElementById('newVote').addEventListener('submit', newVote);
 
+    function callToast() {
+
+      var x = document.getElementById("snackbar");
+      x.className = "show";
+      setTimeout(function(){ x.className = x.className.replace("show", ""); }, 3000);
+    }
+
+    function onSuccess(msg){
+
+        document.getElementById('snackbar').innerText = msg
+        callToast();
+    }
+
+    function raiseError(msg){
+
+        document.getElementById('snackbar').innerText = msg
+        callToast();
+    }
+
     function newVote(event){
             event.preventDefault();
 
@@ -18,6 +37,18 @@ document.getElementById('newVote').addEventListener('submit', newVote);
                 },
                 body:JSON.stringify({createdBy:createdBy, office:office, candidate:candidate})
             }).then((res) => res.json())
-            .then((data) =>  console.log(data))
-            .catch((err)=>console.log(err))
+            .then((data) =>  {
+                console.log(data);
+                let status = data['status'];
+                let message = data['message'];
+                if (status === '201'){
+                    onSuccess('Voted successfully!');
+                }else{
+                    raiseError(message);
+                }
+            })
+            .catch((err)=>{
+                raiseError("Please check your internet connection and try again!");
+                console.log(err);
+            })
         }

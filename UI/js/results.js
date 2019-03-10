@@ -1,5 +1,24 @@
 document.getElementById('getResults').addEventListener('click', getResults);
 
+    function callToast() {
+
+      var x = document.getElementById("snackbar");
+      x.className = "show";
+      setTimeout(function(){ x.className = x.className.replace("show", ""); }, 3000);
+    }
+
+    function onSuccess(msg){
+
+        document.getElementById('snackbar').innerText = msg
+        callToast();
+    }
+
+    function raiseError(msg){
+
+        document.getElementById('snackbar').innerText = msg
+        callToast();
+    }
+
     function getResults(event){
             event.preventDefault();
 
@@ -16,10 +35,10 @@ document.getElementById('getResults').addEventListener('click', getResults);
             })
             .then((res) => res.json())
             .then((data) => {
-                let show = `<h3 style="margin-left: 10px;"> Results grouped by Candidate ID and count.</h3>`;
-                data.office.forEach(off => {
-                    const { candidate, count } = off
-                    show +=
+                let disp = `<h3 style="margin-left: 10px;"> Results grouped by Candidate ID and count.</h3>`;
+                data.votes.forEach(vote => {
+                    const { candidate, count } = vote
+                    disp +=
                         `<div>
                              <table>
                                 <tr>
@@ -32,7 +51,11 @@ document.getElementById('getResults').addEventListener('click', getResults);
                                 </tr>
                              </table>
                           </div>`;
-                            document.getElementById('show').innerHTML = counts;
+                            document.getElementById('disp').innerHTML = disp;
                         });
-                    }).catch((err)=>console.log(err))
+                    })
+            .catch((err)=>{
+                raiseError("Please check your internet connection and try again!");
+                console.log(err);
+            })
     }

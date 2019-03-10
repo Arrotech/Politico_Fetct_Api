@@ -1,87 +1,105 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Request</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" media="screen" href="css/main.css"/>
+    <link rel="stylesheet" type="text/css" media="screen" href="css/main.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
-    <body>
-        <div class="leftnav">
-            <a href="#profile"><img src="img/avatar.png" alt="Avatar" class="avatar"></a><br>
-            <a href="offices.html">Elections</a><br>
-            <a href="#">Profile</a><br>
-            <a href="#">Trash</a><br>
-            <a href="#">Help & Feedback</a><br>
-            <a href="#">Calendar</a><br>
-            <a href="#">Settings</a><br>
-            <a id="logout" onclick="on_logout()" href="#">Sign Out</a><br>
+
+<body>
+    <div class="leftnav">
+        <a href="#profile"><img src="img/avatar.png" alt="Avatar" class="avatar"></a><br>
+        <a href="offices.html">Elections</a><br>
+        <a href="#">Profile</a><br>
+        <a href="#">Trash</a><br>
+        <a href="#">Help & Feedback</a><br>
+        <a href="#">Calendar</a><br>
+        <a href="#">Settings</a><br>
+        <a id="logout" onclick="on_logout()" href="#">Sign Out</a><br>
+    </div>
+    <div class="main">
+        <header>
+            <h1>Politico</h1>
+        </header>
+        <nav>
+            <div>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="create_party.html">Create Party</a></li>
+                    <li><a href="edit_party.html">Edit Party</a></li>
+                    <li><a href="delete_party.html">Delete Party</a></li>
+                    <li><a href="create_office.html">Create Office</a></li>
+                    <li><a href="edit_office.html">Edit Office</a></li>
+                    <li><a href="delete_office.html">Delete Office</a></li>
+                    <li><a href="interest.html">Make Candidate</a></li>
+                </ul>
+            </div>
+        </nav>
+        <div class="container">
+            <div class="wrap-register">
+                <form id="showInterest">
+                    <h2>Request to run for an office</h2>
+                    <hr>
+                    <label><b>Political Office:</b></label><br>
+                    <input id="office" type="text" placeholder="i.e Office Id" name="" required><br>
+                    <br>
+
+                    <label><b>Candidate:</b></label><br>
+                    <input id="candidate" type="text" placeholder="i.e Candidate Id" name="" required><br>
+                    <br>
+
+                    <label><b>Political Party:</b></label><br>
+                    <input id="party" type="text" placeholder="i.e Party Id" name="" required><br>
+                    <br>
+
+                    <div>
+                        <button type="submit" class="signupbtn">Promote</button>
+                    </div>
+                    <div id="snackbar">Just a moment...</div>
+                </form>
+                <script type="text/javascript" src="js/interest.js"></script>
+                <script type="text/javascript" src="js/logout.js"></script>
+            </div>
         </div>
-        <div class="main">
-            <header><h1>Politico</h1></header>
-            <nav>
-                <div>
-                    <ul>
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="create_party.html">Create Party</a></li>
-                        <li><a href="edit_party.html">Edit Party</a></li>
-                        <li><a href="delete_party.html">Delete Party</a></li>
-                        <li><a href="create_office.html">Create Office</a></li>
-                        <li><a href="edit_office.html">Edit Office</a></li>
-                        <li><a href="delete_office.html">Delete Office</a></li>
-                        <li><a href="interest.html">Make Candidate</a></li>
-                    </ul>
+        <footer>
+            <div class="footer-divide">
+                <div class="divide">
+                    <h2>Contact Us</h2>
+                    <p>Tel : (+254) 7 568 564</p>
+                    <p>Email : arrotechdesign@gmail.com</p>
                 </div>
-            </nav>
-            <div class="container">
-                <div class="wrap-register">
-                    <form id="showInterest">
-                        <h2>Request to run for an office</h2>
-                        <hr>
-                        <label ><b>Political Office:</b></label>
-                        <input id="office" type="text" placeholder="i.e Office Id" name="" required>
-
-                        <label ><b>Candidate:</b></label>
-                        <input id="candidate" type="text" placeholder="i.e Candidate Id" name="" required>
-
-                        <label ><b>Political Party:</b></label>
-                        <input id="party" type="text" placeholder="i.e Party Id" name="" required>
-
-                        <div>
-                            <button type="submit" class="signupbtn">Request</button>
+                <div class="divide">
+                    <h2>Elections</h2>
+                    <p>Government offices</p>
+                    <p>Candidates</p>
+                </div>
+                <div class="divide">
+                    <h2>Social Media</h2>
+                    <div class="social-footer">
+                        <div class="social-footer-icons">
+                            <ul class="menu simple">
+                                <li><a href="https://www.facebook.com/"><i class="fa fa-facebook"
+                                            aria-hidden="true"></i></a></li>
+                                <li><a href="https://www.instagram.com/?hl=en"><i class="fa fa-instagram"
+                                            aria-hidden="true"></i></a></li>
+                                <li><a href="https://twitter.com/?lang=en"><i class="fa fa-twitter"
+                                            aria-hidden="true"></i></a></li>
+                                <li><a href="https://twitter.com/?lang=en"><i class="fa fa-youtube"
+                                            aria-hidden="true"></i></a></li>
+                                <li><a href="https://www.google.com/"><i class="fa fa-google"
+                                            aria-hidden="true"></i></a></li>
+                            </ul>
                         </div>
-                    </form>
-                    <script type="text/javascript" src="js/interest.js"></script>
-                    <script type="text/javascript" src="js/logout.js"></script>
+                    </div>
+                    <p>Copyright © 2019 ARROTECH Inc. All rights reserved.</p>
                 </div>
             </div>
-            <footer>
-                <div class="footer-divide">
-                    <div class="divide">
-                        <h2>Contact Us</h2>
-                        <p>Tel : (+254) 7 568 564</p>
-                        <p>Instagram: @arrotech</p>
-                        <p>Email : arrotechdesign@gmail.com</p>
-                        <p>Facebook: Arrotech</p>
-                        <p>Twitter: @Arrotech</p>  
-                    </div>
-                    <div class="divide">
-                        <h2>Elections</h2>
-                        <p>Political parties</p>
-                        <p>Government offices</p>
-                        <p>Candidates</p>
-                        <p>Voters</p>
-                    </div>
-                    <div class="divide">
-                        <h2>Others</h2>
-                        <p>Admin</p>
-                        <p>Politicians</p>
-                        <p>SignUp</p>
-                        <p>Login</p>
-                    </div>                               
-                </div>
-            </footer>
-        </div>
-    </body>
+        </footer>
+    </div>
+</body>
+
 </html>

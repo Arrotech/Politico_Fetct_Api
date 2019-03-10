@@ -1,81 +1,97 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Delete-Office</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" media="screen" href="css/main.css"/>
+    <link rel="stylesheet" type="text/css" media="screen" href="css/main.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
-    <body>
-        <div class="leftnav">
-                <a href="#profile"><img src="img/avatar.png" alt="Avatar" class="avatar"></a><br>
-                <a href="offices.html">Elections</a><br>
-                <a href="#">Profile</a><br>
-                <a href="#">Trash</a><br>
-                <a href="#">Help & Feedback</a><br>
-                <a href="#">Calendar</a><br>
-                <a href="#">Settings</a><br>
-                <a id="logout" onclick="on_logout()" href="#">Sign Out</a><br>
-        </div>
-            <div class="main">
-                <header><h1>Politico</h1></header>
-                <nav>
-                    <div>
-                        <ul>
-                            <li><a href="index.html">Home</a></li>
-                            <li><a href="create_party.html">Create Party</a></li>
-                            <li><a href="edit_party.html">Edit Party</a></li>
-                            <li><a href="delete_party.html">Delete Party</a></li>
-                            <li><a href="create_office.html">Create Office</a></li>
-                            <li><a href="edit_office.html">Edit Office</a></li>
-                            <li><a href="delete_office.html">Delete Office</a></li>
-                            <li><a href="interest.html">Make Candidate</a></li>
-                        </ul>
-                    </div>
-                </nav>
-            <div class="container">
-                <div class="wrap-register">
-                    <form id="deleteOffice">
-                        <h2>Delete Office</h2>
-                        <hr>
-                        <label ><b>Office Id:</b></label>
-                        <input id="office_id" type="text" placeholder="i.e 1" name="" required>
 
-                        <div>
-                            <button type="submit" class="signupbtn">Delete</button>
+<body>
+    <div class="leftnav">
+        <a href="#profile"><img src="img/avatar.png" alt="Avatar" class="avatar"></a><br>
+        <a href="offices.html">Elections</a><br>
+        <a href="#">Profile</a><br>
+        <a href="#">Trash</a><br>
+        <a href="#">Help & Feedback</a><br>
+        <a href="#">Calendar</a><br>
+        <a href="#">Settings</a><br>
+        <a id="logout" onclick="on_logout()" href="#">Sign Out</a><br>
+    </div>
+    <div class="main">
+        <header>
+            <h1>Politico</h1>
+        </header>
+        <nav>
+            <div>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="create_party.html">Create Party</a></li>
+                    <li><a href="edit_party.html">Edit Party</a></li>
+                    <li><a href="delete_party.html">Delete Party</a></li>
+                    <li><a href="create_office.html">Create Office</a></li>
+                    <li><a href="edit_office.html">Edit Office</a></li>
+                    <li><a href="delete_office.html">Delete Office</a></li>
+                    <li><a href="interest.html">Make Candidate</a></li>
+                </ul>
+            </div>
+        </nav>
+        <div class="container">
+            <div class="wrap-register">
+                <form id="deleteOffice">
+                    <h2>Delete Office</h2>
+                    <hr>
+                    <label><b>Office Id:</b></label><br>
+                    <input id="office_id" type="text" placeholder="i.e 1" name="" required><br>
+                    <br>
+
+                    <div>
+                        <button type="submit" class="signupbtn">Delete</button>
+                    </div>
+                    <div id="snackbar">Just a moment...</div>
+                </form>
+                <script type="text/javascript" src="js/delete_office.js"></script>
+                <script type="text/javascript" src="js/logout.js"></script>
+            </div>
+        </div>
+        <footer>
+            <div class="footer-divide">
+                <div class="divide">
+                    <h2>Contact Us</h2>
+                    <p>Tel : (+254) 7 568 564</p>
+                    <p>Email : arrotechdesign@gmail.com</p>
+                </div>
+                <div class="divide">
+                    <h2>Elections</h2>
+                    <p>Government offices</p>
+                    <p>Candidates</p>
+                </div>
+                <div class="divide">
+                    <h2>Social Media</h2>
+                    <div class="social-footer">
+                        <div class="social-footer-icons">
+                            <ul class="menu simple">
+                                <li><a href="https://www.facebook.com/"><i class="fa fa-facebook"
+                                            aria-hidden="true"></i></a></li>
+                                <li><a href="https://www.instagram.com/?hl=en"><i class="fa fa-instagram"
+                                            aria-hidden="true"></i></a></li>
+                                <li><a href="https://twitter.com/?lang=en"><i class="fa fa-twitter"
+                                            aria-hidden="true"></i></a></li>
+                                <li><a href="https://twitter.com/?lang=en"><i class="fa fa-youtube"
+                                            aria-hidden="true"></i></a></li>
+                                <li><a href="https://www.google.com/"><i class="fa fa-google"
+                                            aria-hidden="true"></i></a></li>
+                            </ul>
                         </div>
-                    </form>
-                    <script type="text/javascript" src="js/delete_office.js"></script>
-                    <script type="text/javascript" src="js/logout.js"></script>
+                    </div>
+                    <p>Copyright © 2019 ARROTECH Inc. All rights reserved.</p>
                 </div>
             </div>
-            <footer>
-                <div class="footer-divide">
-                    <div class="divide">
-                        <h2>Contact Us</h2>
-                        <p>Tel : (+254) 7 568 564</p>
-                        <p>Instagram: @arrotech</p>
-                        <p>Email : arrotechdesign@gmail.com</p>
-                        <p>Facebook: Arrotech</p>
-                        <p>Twitter: @Arrotech</p>  
-                    </div>
-                    <div class="divide">
-                        <h2>Elections</h2>
-                        <p>Political parties</p>
-                        <p>Government offices</p>
-                        <p>Candidates</p>
-                        <p>Voters</p>
-                    </div>
-                    <div class="divide">
-                        <h2>Others</h2>
-                        <p>Admin</p>
-                        <p>Politicians</p>
-                        <p>SignUp</p>
-                        <p>Login</p>
-                    </div>                               
-                </div>
-            </footer>
-        </div>
-    </body>
+        </footer>
+    </div>
+</body>
+
 </html>

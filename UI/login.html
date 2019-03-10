@@ -1,73 +1,97 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Log-In</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" media="screen" href="css/main.css"/>
+    <link rel="stylesheet" type="text/css" media="screen" href="css/main.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
-    <body>
-        <header><h1>Politico</h1></header>
-        <nav>
-            <div>
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="register.html">SignUp</a></li>
-                </ul>
+
+<body>
+    <header>
+        <h1>Politico</h1>
+    </header>
+    <nav>
+        <div>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="register.html">SignUp</a></li>
+            </ul>
+        </div>
+    </nav>
+    <div class="main-content">
+        <form id="postLogin">
+            <div class="container">
+                <div class="wrap-login">
+                    <h2>Login to Your Account</h2>
+                    <hr>
+                    <div>
+                        <label><b>Email:</b></label><br>
+                        <input id="email" type="text" placeholder="Email" name="" required><br>
+                        <br>
+
+                        <label><b>Password:</b></label><br>
+                        <input id="password" type="password" placeholder="Password" name="" required><br>
+                        <br>
+                    </div>
+
+                    <div>
+                        <button type="submit" onclick="callToast()" class="signinbtn position">Login</button>
+                    </div>
+                    <div id="snackbar">Just a moment...</div>
+                    <div class="lnk">
+                        <p>Dont have an account? <a href="register.html">SignUp</a></p>
+                    </div>
+
+                    <div class="fb-like" data-href="https://web.facebook.com/gachanjaharun/" data-layout="standard" data-action="like" data-size="small" data-show-faces="false" data-share="true"></div>
+                </div>
             </div>
-        </nav>
-        <div class="main-content">
-            <form id="postLogin">
-                <div class="container">
-                    <div class="wrap-login">
-                        <h2>Login to Your Account</h2>
-                        <hr>
-                        <div>
-                            <label><b>Email</b></label><br>
-                            <input id="email" type="text" placeholder="Email" name="" required><br>
-
-                            <label><b>Password</b></label><br>
-                            <input id="password" type="password" placeholder="Password" name="" required><br>
-                        </div>
-
-                        <div>
-                            <button type="submit" class="signinbtn position">Login</button>
-                        </div>
-                        <div id="snackbar">Just a moment...</div>
-                        <div class="lnk">
-                            <p>Dont have an account? <a href="register.html">SignUp</a></p>
-                        </div>
+        </form>
+    </div>
+    <div id="fb-root"></div>
+    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.2"></script>
+    <script type="text/javascript" src="js/login.js"></script>
+    <footer>
+        <div class="footer-divide">
+            <div class="divide">
+                <h2>Contact Us</h2>
+                <p>Tel : (+254) 7 568 564</p>
+                <p>Email : arrotechdesign@gmail.com</p>
+                <vr>
+            </div>
+            <div class="divide">
+                <h2>Elections</h2>
+                <p>Government offices</p>
+                <p>Candidates</p>
+            </div>
+            <div class="divide">
+                <h2>Social Media</h2>
+                <div class="social-footer">
+                    <div class="social-footer-icons">
+                        <ul class="menu simple">
+                            <li><a href="https://www.facebook.com/"><i class="fa fa-facebook"
+                                        aria-hidden="true"></i></a></li>
+                            <li><a href="https://www.instagram.com/?hl=en"><i class="fa fa-instagram"
+                                        aria-hidden="true"></i></a></li>
+                            <li><a href="https://twitter.com/?lang=en"><i class="fa fa-twitter"
+                                        aria-hidden="true"></i></a></li>
+                            <li><a href="https://twitter.com/?lang=en"><i class="fa fa-youtube"
+                                        aria-hidden="true"></i></a></li>
+                            <li><a href="https://www.google.com/"><i class="fa fa-google"
+                                        aria-hidden="true"></i></a></li>
+                            <li><a href="https://www.google.com/"><i class="fa fa-pinterest"
+                                        aria-hidden="true"></i></a></li>
+                        </ul>
                     </div>
                 </div>
-            </form>
-        </div>
-        <script type="text/javascript" src="js/login.js"></script>
-        <footer>
-            <div class="footer-divide">
-                <div class="divide">
-                    <h2>Contact Us</h2>
-                    <p>Tel : (+254) 7 568 564</p>
-                    <p>Instagram: @arrotech</p>
-                    <p>Email : arrotechdesign@gmail.com</p>
-                    <p>Facebook: Arrotech</p>
-                    <p>Twitter: @Arrotech</p>  
-                </div>
-                <div class="divide">
-                    <h2>Elections</h2>
-                    <p>Political parties</p>
-                    <p>Government offices</p>
-                    <p>Candidates</p>
-                    <p>Voters</p>
-                </div>
-                <div class="divide">
-                    <h2>Others</h2>
-                    <p>Admin</p>
-                    <p>Politicians</p>
-                    <p>SignUp</p>
-                    <p>Login</p>
-                </div>                               
+                <p>Copyright © 2019 ARROTECH Inc. All rights reserved.</p>
+                <vr>
             </div>
-        </footer>
-    </body>   
+        </div>
+    </footer>
+</body>
+
 </html>
