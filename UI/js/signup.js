@@ -1,5 +1,24 @@
 document.getElementById('postSignup').addEventListener('submit', postSignup);
 
+    function callToast() {
+
+      var x = document.getElementById("snackbar");
+      x.className = "show";
+      setTimeout(function(){ x.className = x.className.replace("show", ""); }, 3000);
+    }
+
+    function onSuccess(msg){
+
+        document.getElementById('snackbar').innerText = msg
+        callToast();
+    }
+
+    function raiseError(msg){
+
+        document.getElementById('snackbar').innerText = msg
+        callToast();
+    }
+
  function postSignup(event){
             event.preventDefault();
 
@@ -22,15 +41,17 @@ document.getElementById('postSignup').addEventListener('submit', postSignup);
             .then((data) =>  {
 
                 console.log(data);
-                let user = data['user'];
-                if (user.email === 'admin@admin.com'){
-                    localStorage.setItem("user", JSON.stringify(data[0]));
-                    window.location.replace('admin.html');
-                }else{
+                let status = data['status'];
+                let message = data['message'];
+                if (status === '201'){
                     localStorage.setItem("user", JSON.stringify(data[0]));
                     window.location.replace('user.html');
+                }else{
+                    raiseError(message);
                 }
-
             })
-            .catch((err)=>console.log(err))
+            .catch((err)=>{
+                raiseError("Please check your internet connection and try again!");
+                console.log(err);
+            })
         }

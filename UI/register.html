@@ -1,92 +1,116 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Register</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" media="screen" href="css/main.css"/>
+    <link rel="stylesheet" type="text/css" media="screen" href="css/main.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
-    <body>
-        <header><h1>Politico</h1></header>
-        <nav>
-            <div>
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="login.html">Login</a></li>
-                </ul>
-            </div>
-        </nav>
-        <div class="main-content">   
-            <form  id="postSignup">
-                <div class="container">
-                    <div class="wrap-register">
-                        <h2>Create a New Account</h2>
-                        <hr>
-                        <div>
-                            <label><b>Firstname</b></label>
-                            <input id="firstname" type="text" placeholder="Firstname" name="" required>
-                        </div>
-                        <div>
-                            <label><b>Lastname</b></label>
-                            <input id="lastname" type="text" placeholder="Lastname" name="" required>
-                        </div>
-                        <div>
-                            <label for="email"><b>Email</b></label>
-                            <input id="email" type="text" placeholder="Email" name="email" required>
-                        </div>
-                        <div>
-                            <label for="psw"><b>Password</b></label>
-                            <input id="password" type="password" placeholder="Password" name="psw" required>
-                        </div>
-                        <div>
-                            <label for="pNumber"><b>Phone Number</b></label>
-                            <input id="phoneNumber" type="text" placeholder="Phone Number" name="pNumber" required>
-                        </div>
-                        <div>
-                            <label for="pUrl"><b>Passport Url</b></label>
-                            <input id="passportUrl" type="text" placeholder="Passport Url" name="pUrl" required>
-                        </div>
-                        <div>
-                            <label for="role"><b>Role</b></label>
-                            <input id="role" type="text" placeholder="Role" name="role" required>
-                        </div>
-                        <div>
-                            <button type="submit" class="signupbtn">SignUp</button>
-                        </div>
-                        <div class="lnk">
-                            <p>Already have an account? <a href="login.html">Login</a></p>
-                        </div>
+
+<body>
+    <header>
+        <h1>Politico</h1>
+    </header>
+    <nav>
+        <div>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="login.html">Login</a></li>
+            </ul>
+        </div>
+    </nav>
+    <div class="main-content">
+        <form id="postSignup">
+            <div class="container">
+                <div class="wrap-register">
+                    <h2>Create a New Account</h2>
+                    <hr>
+                    <div>
+                        <label><b>Firstname:</b></label><br>
+                        <input id="firstname" type="text" placeholder="Firstname" name="" required><br>
+                        <br>
+                    </div>
+                    <div>
+                        <label><b>Lastname:</b></label><br>
+                        <input id="lastname" type="text" placeholder="Lastname" name="" required><br>
+                        <br>
+                    </div>
+                    <div>
+                        <label for="email"><b>Email:</b></label><br>
+                        <input id="email" type="text" placeholder="Email" name="email" required><br>
+                        <br>
+                    </div>
+                    <div>
+                        <label for="psw"><b>Password:</b></label><br>
+                        <input id="password" type="password" placeholder="Password" name="psw" required><br>
+                        <br>
+                    </div>
+                    <div>
+                        <label for="pNumber"><b>Phone Number:</b></label><br>
+                        <input id="phoneNumber" type="text" placeholder="Phone Number" name="pNumber" required><br>
+                        <br>
+                    </div>
+                    <div>
+                        <label for="pUrl"><b>Passport Url:</b></label><br>
+                        <input id="passportUrl" type="text" placeholder="Passport Url" name="pUrl" required><br>
+                        <br>
+                    </div>
+                    <div>
+                        <label for="role"><b>Role:</b></label><br>
+                        <input id="role" type="text" placeholder="Role" name="role" required><br>
+                        <br>
+                    </div>
+                    <div>
+                        <button type="submit" class="signupbtn">SignUp</button>
+                    </div>
+                    <div id="snackbar">Just a moment...</div>
+                    <div class="lnk">
+                        <p>Already have an account? <a href="login.html">Login</a></p>
                     </div>
                 </div>
-            </form>
-        </div>
-        <script type="text/javascript" src="js/signup.js"></script>
-        <footer>
-            <div class="footer-divide">
-                <div class="divide">
-                    <h2>Contact Us</h2>
-                    <p>Tel : (+254) 7 568 564</p>
-                    <p>Instagram: @arrotech</p>
-                    <p>Email : arrotechdesign@gmail.com</p>
-                    <p>Facebook: Arrotech</p>
-                    <p>Twitter: @Arrotech</p>  
-                </div>
-                <div class="divide">
-                    <h2>Elections</h2>
-                    <p>Political parties</p>
-                    <p>Government offices</p>
-                    <p>Candidates</p>
-                    <p>Voters</p>
-                </div>
-                <div class="divide">
-                    <h2>Others</h2>
-                    <p>Admin</p>
-                    <p>Politicians</p>
-                    <p>SignUp</p>
-                    <p>Login</p>
-                </div>                               
             </div>
-        </footer> 
-    </body>
+        </form>
+    </div>
+    <script type="text/javascript" src="js/signup.js"></script>
+    <footer>
+        <div class="footer-divide">
+            <div class="divide">
+                <h2>Contact Us</h2>
+                <p>Tel : (+254) 7 568 564</p>
+                <p>Email : arrotechdesign@gmail.com</p>
+            </div>
+            <div class="divide">
+                <h2>Elections</h2>
+                <p>Government offices</p>
+                <p>Candidates</p>
+            </div>
+            <div class="divide">
+                <h2>Social Media</h2>
+                <div class="social-footer">
+                    <div class="social-footer-icons">
+                        <ul class="menu simple">
+                            <li><a href="https://www.facebook.com/"><i class="fa fa-facebook"
+                                        aria-hidden="true"></i></a></li>
+                            <li><a href="https://www.instagram.com/?hl=en"><i class="fa fa-instagram"
+                                        aria-hidden="true"></i></a></li>
+                            <li><a href="https://twitter.com/?lang=en"><i class="fa fa-twitter"
+                                        aria-hidden="true"></i></a></li>
+                            <li><a href="https://twitter.com/?lang=en"><i class="fa fa-youtube"
+                                        aria-hidden="true"></i></a></li>
+                            <li><a href="https://www.google.com/"><i class="fa fa-google"
+                                        aria-hidden="true"></i></a></li>
+                            <li><a href="https://www.google.com/"><i class="fa fa-pinterest"
+                                        aria-hidden="true"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+                <p>Copyright © 2019 ARROTECH Inc. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+
 </html>

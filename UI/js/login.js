@@ -1,5 +1,24 @@
 document.getElementById('postLogin').addEventListener('submit', postLogin);
 
+    function callToast() {
+
+      var x = document.getElementById("snackbar");
+      x.className = "show";
+      setTimeout(function(){ x.className = x.className.replace("show", ""); }, 3000);
+    }
+
+    function onSuccess(msg){
+
+        document.getElementById('snackbar').innerText = msg
+        callToast();
+    }
+
+    function raiseError(msg){
+        
+        document.getElementById('snackbar').innerText = msg
+        callToast();
+    }
+
     function postLogin(event){
             event.preventDefault();
 
@@ -18,15 +37,28 @@ document.getElementById('postLogin').addEventListener('submit', postLogin);
 
                 console.log(data);
                 let user = data['user'];
-                if (user.email === 'admin@admin.com'){
+                let status = data['status'];
+                let message = data['message'];
+                if (status === '200'){
+                    if (user.email === 'admin@admin.com'){
+                        localStorage.setItem('token', data.token);
+                        onSuccess('Signed in successfully!');
+                        window.location.replace('admin.html');
+                    }
+                    else{
                     localStorage.setItem('token', data.token);
-                    window.location.replace('admin.html');
-                }else{
-                    localStorage.setItem('token', data.token);
+                    onSuccess('Signed in successfully!');
                     window.location.replace('user.html');
+                    }
+                }else{
+                    raiseError(message);
                 }
+
             })
-            .catch((err)=>console.log(err))
+            .catch((err)=> {
+                raiseError("Please check your internet connection!");
+                console.log(err);
+            })
         }
 
 
